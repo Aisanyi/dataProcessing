@@ -1,6 +1,6 @@
-import elementui from "./model/elementui"
+import getDate from "./model/getDate"
 
 
 export {
-  elementui
+  getDate
 }
