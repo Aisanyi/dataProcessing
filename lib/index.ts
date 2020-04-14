@@ -1,6 +1,6 @@
-import getDate from "./model/getDate"
+import getTime from "./model/getTime"
 
 
 export {
-  getDate
+  getTime
 }
