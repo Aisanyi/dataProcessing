@@ -1,3 +1,8 @@
+/**
+ * 即将导出的日期对象的接口
+ * 
+ * @interface DateObject
+ */
 interface DateObject {
   year: number,
   month: number,
