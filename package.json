@@ -1,20 +1,17 @@
 {
   "name": "dataprocessing",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "This is a data processing project",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
     "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Aisanyi/dataProcessing.git"
-  },
+  "repository": "git+https://github.com/Aisanyi/dataProcessing.git",
   "keywords": [
     "typescript"
   ],
-  "author": "",
+  "author": "Aisanyi <897023994@qq.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Aisanyi/dataProcessing/issues"
