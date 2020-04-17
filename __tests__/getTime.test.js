@@ -45,8 +45,8 @@ test('传入为string,2020年3月1日', () => {
   });
 });
 test('传入为number,时间戳', () => {
-  const result = getTime(1583000433000);
   let date = new Date('2020.3.1 2:20:33')
+  const result = getTime(date.getTime());
   expect(result).toEqual({
     year: date.getFullYear(),
     month: date.getMonth() + 1,
