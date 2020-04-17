@@ -4,3 +4,4 @@ package-lock.json
 tsconfig.json
 .gitignore
 __test__
+.travis.yml
