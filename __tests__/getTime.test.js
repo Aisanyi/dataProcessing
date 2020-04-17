@@ -4,54 +4,58 @@ const { getTime } = require('../dist');
 
 test('传入为string', () => {
   const result = getTime('2020.3.1 2:20:33');
+  let date = new Date('2020.3.1 2:20:33')
   expect(result).toEqual({
-    year: 2020,
-    month: 3,
-    day: 1,
-    hour: 2,
-    minute: 20,
-    second: 33,
-    date: 1583000433000,
-    dateDay: "2020年3月1日",
+    year: date.getFullYear(),
+    month: date.getMonth() + 1,
+    day: date.getDate(),
+    hour: date.getHours(),
+    minute: date.getMinutes(),
+    second: date.getSeconds(),
+    date: date.getTime(),
+    dateDay: `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`,
   });
 });
 test('传入为string，2020-3-1', () => {
   const result = getTime('2020-3-1 2:20:33');
+  let date = new Date('2020.3.1 2:20:33')
   expect(result).toEqual({
-    year: 2020,
-    month: 3,
-    day: 1,
-    hour: 2,
-    minute: 20,
-    second: 33,
-    date: 1583000433000,
-    dateDay: "2020年3月1日",
+    year: date.getFullYear(),
+    month: date.getMonth() + 1,
+    day: date.getDate(),
+    hour: date.getHours(),
+    minute: date.getMinutes(),
+    second: date.getSeconds(),
+    date: date.getTime(),
+    dateDay: `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`,
   });
 });
 test('传入为string,2020年3月1日', () => {
   const result = getTime('2020年3月1日 2:20:33');
+  let date = new Date('2020.3.1 2:20:33')
   expect(result).toEqual({
-    year: 2020,
-    month: 3,
-    day: 1,
-    hour: 2,
-    minute: 20,
-    second: 33,
-    date: 1583000433000,
-    dateDay: "2020年3月1日",
+    year: date.getFullYear(),
+    month: date.getMonth() + 1,
+    day: date.getDate(),
+    hour: date.getHours(),
+    minute: date.getMinutes(),
+    second: date.getSeconds(),
+    date: date.getTime(),
+    dateDay: `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`,
   });
 });
 test('传入为number,时间戳', () => {
   const result = getTime(1583000433000);
+  let date = new Date('2020.3.1 2:20:33')
   expect(result).toEqual({
-    year: 2020,
-    month: 3,
-    day: 1,
-    hour: 2,
-    minute: 20,
-    second: 33,
-    date: 1583000433000,
-    dateDay: "2020年3月1日",
+    year: date.getFullYear(),
+    month: date.getMonth() + 1,
+    day: date.getDate(),
+    hour: date.getHours(),
+    minute: date.getMinutes(),
+    second: date.getSeconds(),
+    date: date.getTime(),
+    dateDay: `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`,
   });
 });
 test('不传值', () => {

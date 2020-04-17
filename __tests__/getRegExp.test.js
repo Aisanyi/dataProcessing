@@ -8,6 +8,5 @@ test('测试getRegExp过滤中文', () => {
   expect(getRegExp('asdaksd%%3234&&积分哈世界大会发', 'getUChinese')).toBe('asdaksd%%3234&&');
 });
 test('测试getRegExp过滤中文', () => {
-  console.log(getRegExp('123456哈四大皆空很疯狂al;sk', 'getNumber'))
   expect(getRegExp('123456哈四大皆空很疯狂al;sk', 'getNumber')).toBe('123456');
 });
