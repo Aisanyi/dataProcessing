@@ -17,7 +17,7 @@ interface DateObject {
 /**
  *  处理时间
  *
- * @param {string} 日期字符串
+ * @param {string} dete 日期字符串
  * @returns {string}
  */
 function timeClear(date:string) :string {
@@ -29,8 +29,8 @@ function timeClear(date:string) :string {
 /**
  * 获取处理的时间
  *
- * @param {(string | number)} 时间戳或者日期字符串
- * @returns {DateObject} 处理的日期的对象
+ * @param {(string | number)} date 时间戳或者日期字符串
+ * @returns {DateObject}  处理的日期的对象
  */
 function getTime(date:string | number = new Date().getTime()): DateObject {
   typeof date === 'string' ? date = timeClear(date) : false;
