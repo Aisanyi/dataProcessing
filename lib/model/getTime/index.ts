@@ -27,7 +27,7 @@ function timeClear(date:string) :string {
  * @param {(string | number)} 时间戳或者日期字符串
  * @returns {DateObject} 处理的日期的对象
  */
-function getTime(date:string | number): DateObject {
+function getTime(date:string | number = new Date().getTime()): DateObject {
   typeof date === 'string' ? date = timeClear(date) : false
   let newDate = new Date(date);
   let returnData = <DateObject>{};
