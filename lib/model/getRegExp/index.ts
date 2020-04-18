@@ -10,7 +10,8 @@ interface RegType {
 const RegTypeMap:RegType  = {
   getChinese: /[^\u4e00-\u9fa5]/g,
   getUChinese: /[\u4e00-\u9fa5]/g,
-  getNumber: /[\D]/g
+  getNumber: /[\D]/g,
+  getUNumber: /[\d]/g
 }
 
 /**
@@ -21,6 +22,7 @@ const RegTypeMap:RegType  = {
  *    > 1. getChinese: 将非中文过滤掉  
  *    > 2. getUChinese: 将中文过滤掉
  *    > 3. getNumber ：将非数字过滤
+ *    > 4. getUNumber ：将数字过滤
  * @returns {string} 处理过后的字符串
  */
 function getRegExp(str: string, regExp: RegExp | string): string {
