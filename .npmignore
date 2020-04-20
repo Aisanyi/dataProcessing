@@ -7,4 +7,3 @@ __test__
 .travis.yml
 yarn.lock
 babel.config.js
-coverage/
