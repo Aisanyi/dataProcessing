@@ -5,3 +5,6 @@ tsconfig.json
 .gitignore
 __test__
 .travis.yml
+yarn.lock
+babel.config.js
+coverage/

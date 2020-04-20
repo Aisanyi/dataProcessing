@@ -1,5 +1,5 @@
 'use strict';
-const { removeChild } = require('../dist');
+import { removeChild } from '../lib'
 
 test('data为数组,删除空children', ()=>{
   const data = [
@@ -35,8 +35,8 @@ test('data为数组,删除空children', ()=>{
   expect(received[1]).toMatchObject(expected[1])
 })
 test('data为数组为空,删除空children', ()=>{
-  const data = []
-  const expected = []
+  const data: any[] = []
+  const expected: any[] = []
   const received = removeChild(data)
   expect(received).toStrictEqual(expected)
 })

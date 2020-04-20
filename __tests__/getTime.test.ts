@@ -1,5 +1,5 @@
 'use strict';
-const { getTime } = require('../dist');
+import { getTime } from '../lib'
 
 
 test('传入为string', () => {

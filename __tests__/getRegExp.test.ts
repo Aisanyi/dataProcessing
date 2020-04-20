@@ -1,5 +1,5 @@
 'use strict';
-const { getRegExp } = require('../dist');
+import { getRegExp } from '../lib'
 
 test('测试getRegExp过滤非中文', () => {
   expect(getRegExp('asdaksd-%%%5qweq积分哈世界大会发', 'getChinese')).toBe('积分哈世界大会发');
