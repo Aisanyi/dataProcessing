@@ -1,6 +1,6 @@
 {
   "name": "data-processing",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "This is a data processing project",
   "main": "index.js",
   "scripts": {
