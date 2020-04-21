@@ -3,7 +3,9 @@ node_modules/
 package-lock.json
 tsconfig.json
 .gitignore
-__test__
+__tests__/
 .travis.yml
 yarn.lock
 babel.config.js
+jestconfig.json
+yarn.lock
