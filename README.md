@@ -8,7 +8,7 @@
 ## 下载及使用
 #### 下载
 ```
-npm i data-processing
+npm i data-processing | cnpm i data-processing
 ```
 #### 使用
 ```
