@@ -9,7 +9,11 @@
   },
   "repository": "git+https://github.com/Aisanyi/dataProcessing.git",
   "keywords": [
-    "typescript"
+    "typescript",
+    "vue",
+    "time",
+    "时间",
+    "复制"
   ],
   "author": "Aisanyi <897023994@qq.com>",
   "license": "ISC",

@@ -8,7 +8,7 @@ interface obj {
 }
 
 /**
- *
+ *  过滤数组对象
  *
  * @param {Array<obj>} datas 需要处理的值,只支持数组对象形式
  * @param {(obj | Array<string>)} map 映射
