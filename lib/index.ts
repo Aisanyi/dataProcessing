@@ -6,6 +6,7 @@ import screening from "./model/screening"
 import copyText from './model/copyText'
 import downFile from './model/downFile'
 import printing from './model/printing'
+import record from './model/recording'
 
 
 export {
@@ -16,5 +17,6 @@ export {
   screening,
   copyText,
   downFile,
-  printing
+  printing,
+  record
 }
