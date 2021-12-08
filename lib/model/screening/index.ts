@@ -14,21 +14,25 @@ interface obj {
  * @param {(obj | Array<string>)} map 映射
  * @returns {Array<obj>} 处理过后的值
  */
-function screening(datas: Array<obj>, map: obj | Array<string>) : Array<obj>{
+function screening(datas: Array<obj>, map: obj | Array<string>): Array<obj> {
   let maps: obj = {};
   let returnData: Array<obj> = [];
-  Object.prototype.toString.call(map) === "[object Array]" ? map.filter( (v: string) => { maps[v] = v} ) : maps = map
-  datas.forEach( v =>{
+  Object.prototype.toString.call(map) === "[object Array]"
+    ? map.filter((v: string) => {
+        maps[v] = v;
+      })
+    : (maps = map);
+  datas.forEach((v) => {
     let dataObj: obj = {};
     for (const key in maps) {
       if (v.hasOwnProperty(key)) {
-        dataObj[key] = v[maps[key]]
+        dataObj[key] = v[maps[key]];
       }
     }
-    returnData.push(dataObj)
-  })
+    returnData.push(dataObj);
+  });
 
-  return returnData
+  return returnData;
 }
 
 export default screening;

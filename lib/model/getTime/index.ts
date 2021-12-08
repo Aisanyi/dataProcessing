@@ -1,17 +1,17 @@
 /**
  * 即将导出的日期对象的接口
- * 
+ *
  * @interface DateObject
  */
 interface DateObject {
-  year: number,
-  month: number,
-  day: number,
-  hour: number,
-  minute: number,
-  second:number,
-  date: number,
-  dateDay: string
+  year: number;
+  month: number;
+  day: number;
+  hour: number;
+  minute: number;
+  second: number;
+  date: number;
+  dateDay: string;
 }
 
 /**
@@ -20,10 +20,14 @@ interface DateObject {
  * @param {string} dete 日期字符串
  * @returns {string}
  */
-function timeClear(date:string) :string {
+function timeClear(date: string): string {
   let newDate = new Date();
-  date.length === 0 ? date = `${newDate.getFullYear()}年${newDate.getMonth() + 1}月${newDate.getDate()}日` : false;
-  return date.replace(/-|年|月|日/g, '/');
+  date.length === 0
+    ? (date = `${newDate.getFullYear()}年${
+        newDate.getMonth() + 1
+      }月${newDate.getDate()}日`)
+    : false;
+  return date.replace(/-|年|月|日/g, "/");
 }
 
 /**
@@ -32,8 +36,8 @@ function timeClear(date:string) :string {
  * @param {(string | number)} date 时间戳或者日期字符串
  * @returns {DateObject}  处理的日期的对象
  */
-function getTime(date:string | number = new Date().getTime()): DateObject {
-  typeof date === 'string' ? date = timeClear(date) : false;
+function getTime(date: string | number = new Date().getTime()): DateObject {
+  typeof date === "string" ? (date = timeClear(date)) : false;
   let newDate = new Date(date);
   let returnData = <DateObject>{};
   returnData.year = newDate.getFullYear();

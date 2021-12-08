@@ -27,7 +27,10 @@ function selectText(textbox: any, startIndex: number, stopIndex: number) {
  * @param {(number | string)} text 需要复制的内容
  * @param {Function} [callBack = ()=>{}] 成功后的回调
  */
-function copyText(text: number | string, callBack: Function = ()=>{}): boolean {
+function copyText(
+  text: number | string,
+  callBack: Function = () => {}
+): boolean {
   // 数字没有 .length 不能执行selectText 需要转化成字符串
   const textString = text.toString();
   let input: any;
@@ -44,9 +47,9 @@ function copyText(text: number | string, callBack: Function = ()=>{}): boolean {
   input.value = textString;
   // ios必须先选中文字且不支持 input.select();
   selectText(input, 0, textString.length);
-  document.execCommand("copy") ? callBack() : false
+  document.execCommand("copy") ? callBack() : false;
   input.blur();
-  return true
+  return true;
 }
 
 export default copyText;

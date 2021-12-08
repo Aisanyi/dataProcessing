@@ -2,9 +2,8 @@ declare let MediaRecorder: any;
 
 interface videoConfig {
   audio: any;
-  video: any
+  video: any;
 }
-
 
 /**
  *  录制

@@ -1,6 +1,4 @@
-interface removeNode {
-  [propName: string]: any;
-}
+type removeNode = Record<string, any>;
 
 /**
  * 去除数据中空的属性
@@ -33,7 +31,9 @@ function removeChild(
             noChild(v[removeAttr]);
           }
         });
-      } else if(Object.prototype.toString.call(delData) === "[object object]") {
+      } else if (
+        Object.prototype.toString.call(delData) === "[object object]"
+      ) {
         noChild(delData[removeAttr]);
       }
       if (

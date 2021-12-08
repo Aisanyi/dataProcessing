@@ -1,10 +1,9 @@
-'use strict';
-import { getTime } from '../lib'
+"use strict";
+import { getTime } from "../lib";
 
-
-test('传入为string', () => {
-  const result = getTime('2020.3.1 2:20:33');
-  let date = new Date('2020.3.1 2:20:33')
+test("传入为string", () => {
+  const result = getTime("2020.3.1 2:20:33");
+  let date = new Date("2020.3.1 2:20:33");
   expect(result).toEqual({
     year: date.getFullYear(),
     month: date.getMonth() + 1,
@@ -13,12 +12,14 @@ test('传入为string', () => {
     minute: date.getMinutes(),
     second: date.getSeconds(),
     date: date.getTime(),
-    dateDay: `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`,
+    dateDay: `${date.getFullYear()}年${
+      date.getMonth() + 1
+    }月${date.getDate()}日`,
   });
 });
-test('传入为string，2020-3-1', () => {
-  const result = getTime('2020-3-1 2:20:33');
-  let date = new Date('2020.3.1 2:20:33')
+test("传入为string，2020-3-1", () => {
+  const result = getTime("2020-3-1 2:20:33");
+  let date = new Date("2020.3.1 2:20:33");
   expect(result).toEqual({
     year: date.getFullYear(),
     month: date.getMonth() + 1,
@@ -27,12 +28,14 @@ test('传入为string，2020-3-1', () => {
     minute: date.getMinutes(),
     second: date.getSeconds(),
     date: date.getTime(),
-    dateDay: `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`,
+    dateDay: `${date.getFullYear()}年${
+      date.getMonth() + 1
+    }月${date.getDate()}日`,
   });
 });
-test('传入为string,2020年3月1日', () => {
-  const result = getTime('2020年3月1日 2:20:33');
-  let date = new Date('2020.3.1 2:20:33')
+test("传入为string,2020年3月1日", () => {
+  const result = getTime("2020年3月1日 2:20:33");
+  let date = new Date("2020.3.1 2:20:33");
   expect(result).toEqual({
     year: date.getFullYear(),
     month: date.getMonth() + 1,
@@ -41,11 +44,13 @@ test('传入为string,2020年3月1日', () => {
     minute: date.getMinutes(),
     second: date.getSeconds(),
     date: date.getTime(),
-    dateDay: `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`,
+    dateDay: `${date.getFullYear()}年${
+      date.getMonth() + 1
+    }月${date.getDate()}日`,
   });
 });
-test('传入为number,时间戳', () => {
-  let date = new Date('2020.3.1 2:20:33')
+test("传入为number,时间戳", () => {
+  let date = new Date("2020.3.1 2:20:33");
   const result = getTime(date.getTime());
   expect(result).toEqual({
     year: date.getFullYear(),
@@ -55,12 +60,14 @@ test('传入为number,时间戳', () => {
     minute: date.getMinutes(),
     second: date.getSeconds(),
     date: date.getTime(),
-    dateDay: `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`,
+    dateDay: `${date.getFullYear()}年${
+      date.getMonth() + 1
+    }月${date.getDate()}日`,
   });
 });
-test('不传值', () => {
+test("不传值", () => {
   const result = getTime();
-  let date = new Date()
+  let date = new Date();
   expect(result).toEqual({
     year: date.getFullYear(),
     month: date.getMonth() + 1,
@@ -69,12 +76,14 @@ test('不传值', () => {
     minute: date.getMinutes(),
     second: date.getSeconds(),
     date: result.date,
-    dateDay: `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`,
+    dateDay: `${date.getFullYear()}年${
+      date.getMonth() + 1
+    }月${date.getDate()}日`,
   });
 });
-test('传值为空字符串', () => {
-  const result = getTime('');
-  let date = new Date()
+test("传值为空字符串", () => {
+  const result = getTime("");
+  let date = new Date();
   expect(result).toEqual({
     year: date.getFullYear(),
     month: date.getMonth() + 1,
@@ -82,8 +91,11 @@ test('传值为空字符串', () => {
     hour: 0,
     minute: 0,
     second: 0,
-    date: new Date(`${date.getFullYear()}.${date.getMonth() + 1}.${date.getDate()}`).getTime(),
-    dateDay: `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`,
+    date: new Date(
+      `${date.getFullYear()}.${date.getMonth() + 1}.${date.getDate()}`
+    ).getTime(),
+    dateDay: `${date.getFullYear()}年${
+      date.getMonth() + 1
+    }月${date.getDate()}日`,
   });
 });
-
